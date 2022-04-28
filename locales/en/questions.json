@@ -1,0 +1,10 @@
+{
+  "header": {
+    "faq": "FAQ",
+    "title": "Frequently asked Questions"
+  },
+  "accordion": {
+    "question": "What is Bitcoin?",
+    "answer": "Bitcoin (Bitcoin) - the first ever created cryptocurrency. It uses cryptographic techniques to create a currency that is not controlled by one organization (like a central bank). You can send Bitcoin directly to anyone with a BTC address without intermediaries."
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "500-message": "INTERNAL SERVER ERROR",
+  "404-message": "Ooooops.....Page not found",
+  "home-btn": "Back to Home page",
+  "fileUploader": {
+    "size": "File size must be less than {{variant}} mb",
+    "type": "File type must be {{variant}}"
+  }
+}

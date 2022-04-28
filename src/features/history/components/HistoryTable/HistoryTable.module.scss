@@ -1,0 +1,36 @@
+@import '@/styles/variables.module.scss';
+
+.time {
+  max-width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.side {
+  &.red {
+    color: var(--red)
+  }
+
+  &.green {
+    color: var(--green)
+  }
+}
+
+.status {
+  &.alert {
+    color: var(--alert)
+  }
+
+  &.red {
+    color: var(--red)
+  }
+
+  &.green {
+    color: var(--green)
+  }
+
+  &.blue {
+    color: var(--main)
+  }
+}

@@ -1,0 +1,84 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.inputCont {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  transition: $transition-normal;
+  box-sizing: border-box;
+  &:read-only {
+    pointer-events: none;
+  }
+  &.error {
+    color: var(--error);
+    &::placeholder {
+      color: var(--error);
+    }
+  }
+}
+
+.eyeContainer {
+  position: absolute;
+}
+
+// color
+.color_primary {
+  border: 1px solid var(--back-icon);
+  background-color: var(--white);
+  &::placeholder {
+    color: var(--font-secondary);
+  }
+  &:focus {
+    border-color: var(--disabled-state);
+  }
+  &:disabled {
+    background-color: var(--back-icon);
+    color: var(--disabled-state);
+  }
+}
+// color end
+
+// shape
+.shape_big {
+  padding: 15px 16px;
+  border-radius: 6px;
+}
+.shape_small {
+  padding: 11px 16px;
+  border-radius: 4px;
+}
+// shape and
+
+// font
+.font_big {
+  @include text-big;
+}
+.font_small {
+  @include text-small;
+}
+// font end
+
+textarea.input {
+  resize: none;
+  height: 150px;
+}
+
+.eyeContainer {
+  right: 19px;
+  top: 16px;
+}
+.type_password {
+  padding-right: 60px;
+}
+
+.count {
+  float: right
+}

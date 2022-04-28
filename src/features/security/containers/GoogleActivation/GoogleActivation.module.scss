@@ -1,0 +1,31 @@
+@import '@/styles/variables.module.scss';
+
+.step {
+  color: var(--main);
+}
+
+.qr {
+  margin: 32px 0;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.info {
+  @include text-medium();
+  color: var(--font-secondary);
+  text-align: center;
+}
+
+.secretCode {
+  @include text-small();
+  font-size: 10px;
+  text-align: center;
+  color: var(--font-primary);
+  background: var(--background);
+  padding: 16px;
+  margin: 8px 0 32px 0;
+}

@@ -1,0 +1,53 @@
+@import '@/styles/variables.module.scss';
+
+.modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @keyframes background-opacity {
+    0% {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  animation-name: background-opacity;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.showHeader {
+  height: calc(100% - #{$header-height});
+  top: $header-height;
+}
+
+.baseBody {
+  position: relative;
+  min-width: 0;
+  max-width: 485px;
+  padding: 24px;
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--background);
+  box-shadow: $shadow-pop-up;
+  border-radius: 16px;
+  max-height: calc(100% - #{$content-padding-mob} * 2);
+  box-sizing: border-box;
+  margin: 0 $content-padding-mob;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.btnClose {
+  position: absolute;
+  z-index: 2;
+  top: 24px;
+  right: 24px;
+}

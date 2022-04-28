@@ -1,0 +1,42 @@
+@import '@/styles/variables.module.scss';
+
+.desktop {
+  padding: 40px 24px 20px;
+  background: linear-gradient(var(--gradient-footer));
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .line {
+    margin-top: 54px;
+    height: 1px;
+    width: 100%;
+    background: var(--white);
+    opacity: 0.2;
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 54px;
+    .rights {
+      @include text-big();
+      color: var(--white);
+      opacity: 0.75;
+      align-self: center;
+    }
+    .buttons {
+      align-self: flex-end;
+    }
+  }
+
+  .buttons {
+    align-items: center;
+    & > * {
+      margin-right: 32px;
+    }
+  }
+}

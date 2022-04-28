@@ -1,0 +1,179 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  background: linear-gradient(var(--gradient-button));
+  transition: $transition-normal;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--gradient-hover));
+    transition: $transition-normal;
+    transition-property: opacity;
+    z-index: 2;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  &:hover:after {
+    opacity: 1;
+    cursor: pointer;
+  }
+  &:active:after {
+    opacity: 0;
+  }
+
+  svg {
+    z-index: 3;
+  }
+}
+
+.button,
+.arrow {
+  height: 40px;
+  min-width: 40px;
+  margin: 0 4px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: $transition-normal;
+
+  a,
+  button,
+  .arrowLink {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    outline: none;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &.active {
+    background-color: rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    span {
+      color: var(--main);
+    }
+    pointer-events: none;
+  }
+}
+
+.buttonText {
+  color: var(--font-primary);
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin: 0 4px;
+
+  span {
+    position: relative;
+    top: -4px;
+    color: black;
+  }
+}
+
+.arrow {
+  border: none;
+  svg {
+    path {
+      fill: var(--white);
+    }
+  }
+  &.disabled {
+    border: 1px solid #dfeeff;
+    background: unset;
+    pointer-events: none;
+    &:after {
+      opacity: 0;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    svg {
+      path {
+        fill: var(--back-icon);
+      }
+    }
+  }
+}
+
+.container {
+  &.fetching {
+    .button,
+    .arrow {
+      background-color: rgba(0, 0, 0, 0);
+      pointer-events: none;
+    }
+  }
+}
+
+@media screen and #{$sm} {
+  .pagesBefore,
+  .pagesAfter {
+    display: none;
+  }
+  .button,
+  .arrow {
+    margin: 0 6px;
+  }
+}
+
+@mixin hover-supported {
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+.arrow,
+.button {
+  @include hover-supported() {
+    background-color: var(--back-icon);
+    background-clip: padding-box;
+  }
+}
+
+// themes
+.small {
+  .button,
+  .arrow {
+    height: 30px;
+    min-width: 30px;
+    margin: 0 3px;
+    border-radius: 6px;
+  }
+  .arrow {
+    width: 30px;
+  }
+  .dots {
+    height: 30px;
+    width: 30px;
+    margin: 0 3px;
+  }
+}

@@ -1,0 +1,33 @@
+:root[data-theme='light'] {
+  --error: #ff0c1a;
+  --success: #07a649;
+  --alert: #f5a936;
+  --error-secondary: #ffeeee;
+  --success-secondary: #e9ffea;
+  --alert-secondary: #fff9e9;
+
+  --font-primary: #100d0d;
+  --font-secondary: #6f6f6f;
+  --font-captions: #9e9ea0;
+
+  --main: blue;
+  --back-icon: #dfeeff;
+  --background: #f3f9ff;
+  --white: #ffffff;
+
+  --green: #07a649;
+  --red: #ff0c1a;
+  --light-gray: #eaeaea;
+  --malibu: #65abfd;
+
+  --hover-state: #0009b0;
+  --disabled-state: #8cbaff;
+
+  --gradient-green: 180deg, #6ce4f1 0%, #6ad8f2 100%;
+  --gradient-violet: 135deg, #5276fc 0%, #5c9cf8 100%;
+  --gradient-hover: 180deg, #428e98 0%, #1c66db 0.01%, #1092c4 100%, #1092c4 100%;
+  --gradient-button: 180deg, #4cadb9 0%, #287bff 0.01%, #10bdff 100%;
+  --gradient-footer: 180deg, #6ea1e4 0%, #76b2ea 100%;
+
+  --a: 0, 0, 0;
+}

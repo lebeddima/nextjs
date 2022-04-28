@@ -1,0 +1,20 @@
+@import '@/styles/variables.module.scss';
+
+.inputs {
+  & > * {
+    margin-top: $elem-padding-32;
+  }
+  & > *:first-child {
+    margin-top: $elem-padding-48;
+  }
+}
+
+.submit {
+  margin-top: $elem-padding-48;
+}
+
+.content {
+  form {
+    @include readOnly;
+  }
+}

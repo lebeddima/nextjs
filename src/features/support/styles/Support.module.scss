@@ -1,0 +1,7 @@
+@import '@/styles/variables.module.scss';
+
+.title {
+  @include h4();
+  color: var(--font-primary);
+  margin: 0 0 $elem-padding-24 0;
+}

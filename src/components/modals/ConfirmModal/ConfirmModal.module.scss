@@ -1,0 +1,8 @@
+@import '@/styles/variables.module.scss';
+
+.button {
+  display: flex;
+  margin-top: 32px;
+  flex-direction: column;
+  gap: 16px;
+}

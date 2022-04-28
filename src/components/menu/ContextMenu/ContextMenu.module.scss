@@ -1,0 +1,23 @@
+@import '@/styles/variables.module.scss';
+
+.menuBody {
+  background-color: var(--white);
+  border: 1px solid var(--background);
+  box-shadow: $shadow-pop-up;
+  border-radius: 4px;
+  max-width: 200px;
+  min-width: 80px;
+  cursor: pointer;
+  outline: none;
+
+  & > * {
+    padding-left: 6px;
+    &:hover {
+      background: var(--background) !important;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      cursor: pointer;
+    }
+  }
+}
+

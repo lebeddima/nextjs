@@ -1,0 +1,108 @@
+.size {
+  &_small {
+    height: 16px;
+    width: 16px;
+  }
+  &_medium {
+    height: 24px;
+    width: 24px;
+  }
+  &_big {
+    height: 32px;
+    width: 32px;
+  }
+  &_mid-big {
+    height: 40px;
+    width: 40px;
+  }
+  &_extra-big {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+.color-stroke {
+  &_white {
+    path {
+      stroke: var(--white);
+    }
+  }
+  &_blue {
+    path {
+      stroke: var(--main);
+    }
+  }
+  &_malibu {
+    path {
+      stroke: var(--malibu);
+    }
+  }
+  &_red {
+    path {
+      stroke: var(--red);
+    }
+  }
+  &_alert {
+    path {
+      stroke: var(--alert);
+    }
+  }
+  &_green {
+    path {
+      fill: var(--green);
+    }
+  }
+}
+
+.fill {
+  &_white {
+    path {
+      fill: var(--white);
+    }
+  }
+  &_blue {
+    path {
+      fill: var(--main);
+    }
+  }
+  &_malibu {
+    path {
+      fill: var(--malibu);
+    }
+  }
+
+  &_red {
+    path {
+      fill: var(--red);
+    }
+  }
+  &_alert {
+    path {
+      fill: var(--alert);
+    }
+  }
+  &_green {
+    path {
+      fill: var(--green);
+    }
+  }
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.disabled {
+  path {
+    stroke: var(--back-icon);
+  }
+}

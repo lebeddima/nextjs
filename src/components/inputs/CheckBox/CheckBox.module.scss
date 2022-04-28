@@ -1,0 +1,174 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  .target {
+    display: inline-flex;
+    box-sizing: border-box;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+  }
+
+  &.disabled,
+  &.notActive {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.disabled .target {
+    background-clip: padding-box;
+  }
+}
+
+.error {
+  color: var(--error);
+  @include captions-1();
+  margin: 2px 0 0 0;
+}
+
+.slider {
+  .target {
+    width: 40px;
+    height: 24px;
+    background-color: var(--light-gray);
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: background-color $transition-fast;
+  }
+  input {
+    & ~ .target {
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        background-color: var(--white);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        transition: transform $transition-fast;
+      }
+    }
+
+    &:checked ~ .target {
+      background-color: var(--main);
+
+      &:before {
+        transform: translateX(100%);
+      }
+    }
+
+    &:disabled ~ .target {
+      background-color: var(--font-captions);
+      &:before {
+        background-color: var(--background);
+      }
+    }
+  }
+}
+
+// square
+.square {
+  .target {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--font-captions);
+    border-radius: 4px;
+  }
+
+  input {
+    &:checked ~ .target {
+      border: none;
+      background-color: var(--main);
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        transform: rotate(-120deg);
+        top: 9px;
+        left: 2px;
+        background-color: var(--white);
+        width: 5px;
+        height: 1px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 8px;
+        left: 4px;
+        background-color: var(--white);
+        width: 10px;
+        height: 1px;
+      }
+    }
+
+    &:disabled ~ .target {
+      border: 1px solid var(--back-icon);
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+}
+// square end
+
+// circle
+.circle {
+  .target {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--font-captions);
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  input {
+    &:checked ~ .target {
+      border: none;
+      border: 2px solid var(--main);
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        background-color: var(--main);
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+      }
+    }
+
+    &:disabled ~ .target {
+      border: 2px solid var(--font-captions);
+      &:before {
+        background-color: var(--font-captions);
+      }
+    }
+  }
+}
+// circle end
+
+// font
+.font_caption-1 {
+  line-height: 16px;
+  .labelText {
+    @include captions-1();
+    color: var(--font-primary);
+    margin: 1px 0 0 8px;
+  }
+  &.disabled .labelText {
+    color: var(--font-captions);
+  }
+}
+// font end

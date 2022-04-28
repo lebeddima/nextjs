@@ -1,0 +1,9 @@
+{
+  "header": "Personal info",
+  "openedOrders": "Opened Orders",
+  "currencyWallets": "Currency wallets",
+  "fee": {
+    "monthlyVolume": "Monthly volume",
+    "withdrawalLimit": "Withdrawal limit"
+  }
+}

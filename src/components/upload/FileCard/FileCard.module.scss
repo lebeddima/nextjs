@@ -1,0 +1,27 @@
+@import '@/styles/variables.module.scss';
+
+.name {
+  @include text-small();
+  color: var(--main);
+  padding-left: $elem-padding-8;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding-left: $elem-padding-16;
+  justify-content: space-between;
+  height: 56px;
+  background-color: var(--back-icon);
+  border-radius: 4px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+}
+
+.fileError {
+  @include text-small();
+  color: var(--error);
+}

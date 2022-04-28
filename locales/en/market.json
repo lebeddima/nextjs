@@ -1,0 +1,14 @@
+{
+    "header": "Market",
+    "tab-all": "All",
+    "tab-favorites": "Favorites",
+    "table-headers": {
+        "pairs": "Pairs",
+        "name": "Name",
+        "price": "Price",
+        "volume": "24 h volume",
+        "daily-change": "Daily change",
+        "open-interest": "Open interest"
+    }
+  }
+   

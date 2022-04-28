@@ -1,0 +1,80 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  position: relative;
+  height: 689px;
+  h1,
+  h4 {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 56px $content-padding-desk;
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(
+    122.06deg,
+    #88e9ef 9.46%,
+    #7ac1ea 31.94%,
+    #76bae8 53.12%,
+    #5c88db 92.46%
+  );
+  @media #{$lg} {
+    padding: 56px $content-padding-mob;
+  }
+
+  h1 {
+    @include h1();
+    color: var(--white);
+  }
+  h2 {
+    @include h4();
+    color: var(--white);
+    margin-top: 16px;
+  }
+  .devices {
+    position: relative;
+    bottom: -30px;
+    left: 46px;
+    width: 834px;
+    height: 405px;
+    z-index: 2;
+  }
+  .startDecore {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 235px;
+    height: 518px;
+    background-image: url('~assets/images/start_decore.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+
+.mobile{
+  left: -64px;
+  bottom: 64px;
+  position: absolute;
+  z-index: 4;
+}
+
+.tablet{
+  right: -20px;
+  top: 42px;
+  position: absolute;
+  z-index: 4;
+}

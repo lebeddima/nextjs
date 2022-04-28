@@ -1,0 +1,19 @@
+{
+  "items": {
+    "personal-info": "Personal Info",
+    "kyc": "KYC",
+    "security": "Security",
+    "open-orders": "Open orders",
+    "history": "History",
+    "notifications": "Notifications",
+    "support": "Support",
+    "account-deactivation": "Account deactivation"
+  },
+  "deactivation": {
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis facilisis at lectus pulvinar duis sit risus, id quis. Tortor, elementum cursus sit aenean tincidunt est, id sodales pretium. Faucibus ipsum duis bibendum a sed. Dolor libero amet id tempor. Diam pretium tempor eu amet eleifend. Massa in tincidunt lorem vitae nibh gravida consectetur senectus.",
+    "deactivateModal": {
+      "title": "Deactivate your account",
+      "description": "All your data will be erased within 15 days. Please note this action cannot be undone!"
+    }
+  }
+}

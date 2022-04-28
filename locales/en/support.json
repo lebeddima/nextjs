@@ -1,0 +1,16 @@
+{
+  "header": "Support",
+  "headerText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis facilisis at lectus pulvinar duis sit risus, id quis. Tortor, elementum cursus sit aenean tincidunt est, id sodales pretium. Faucibus ipsum duis bibendum a sed. Dolor libero amet id tempor. Diam pretium tempor eu amet eleifend. Massa in tincidunt lorem vitae nibh gravida consectetur senectus.",
+  "supportForm": {
+    "categoryLabel": "Category",
+    "categoryPlaceholder": "Choose one",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Please type here...",
+    "attachField": "Attach files",
+    "button": "Send"
+  },
+  "modal": {
+    "title": "Message sent",
+    "description": "Your message has been successfully sent, our staff will contact you shortly."
+  }
+}

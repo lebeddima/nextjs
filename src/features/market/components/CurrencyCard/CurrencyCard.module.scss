@@ -1,0 +1,58 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 333px;
+    background: var(--white);
+    padding: $elem-padding-24;
+    box-shadow: $shadow-cards;
+    border-radius: 8px;
+
+    @media #{$sm} {
+            padding: $elem-padding-8;
+            align-items: center;
+    }
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: $elem-padding-16;
+
+    @media #{$sm} {
+       margin-left: $elem-padding-8;
+        div {
+            @include text-medium();
+        }
+    }
+}
+
+.data_top {
+    display: flex;
+    align-items: center;
+}
+
+.data_bottom {
+    @include h5();
+}
+
+.currency_name {
+    padding-right: $elem-padding-32;
+
+    @media #{$sm} {
+        padding-right: $elem-padding-8;  
+    }
+}
+
+.card_icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+
+    @media #{$sm} {
+       width: 32px;
+       height: 32px;
+    }
+}

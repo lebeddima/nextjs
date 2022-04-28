@@ -1,0 +1,14 @@
+@import '@/styles/variables.module.scss';
+
+@mixin auth-title() {
+  @include h3();
+  text-align: center;
+  color: var(--main);
+  margin: 0;
+}
+
+.content {
+  & > * {
+    margin-bottom: 40px;
+  }
+}

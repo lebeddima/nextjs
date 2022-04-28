@@ -1,0 +1,23 @@
+@import '@/styles/variables.module.scss';
+
+.titleContainer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  @include text-big();
+  color: var(--font-primary);
+  font-weight: 600;
+}
+
+.card {
+  margin-bottom: 16px;
+}
+
+.description {
+  @include text-medium();
+  color: var(--font-captions);
+}

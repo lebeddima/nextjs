@@ -1,0 +1,11 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  & > *:not(:last-child) {
+    margin-bottom: $elem-padding-8;
+  }
+
+  & > *:last-child {
+    margin-top: $elem-padding-24;
+  }
+}

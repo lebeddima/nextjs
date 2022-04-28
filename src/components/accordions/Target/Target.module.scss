@@ -1,0 +1,40 @@
+@import '@/styles/variables.module.scss';
+
+.hoverText {
+  @include text-big();
+  color: var(--font-primary);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  &:hover .text {
+    @extend .hoverText;
+  }
+}
+
+.text {
+  transition: $transition-fast;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: $transition-fast;
+  svg {
+    fill: var(--main);
+  }
+}
+
+.isActive {
+  .text {
+    @extend .hoverText;
+  }
+  .icon {
+    transform: rotate(90deg);
+  }
+}

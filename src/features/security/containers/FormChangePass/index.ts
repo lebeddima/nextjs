@@ -1,0 +1,1 @@
+export { FormChangePass } from './FormChangePass'

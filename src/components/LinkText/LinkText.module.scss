@@ -1,0 +1,18 @@
+@import '@/styles/variables.module.scss';
+@import '../../styles/variables.module.scss';
+
+.container {
+  display: flex;
+}
+
+.text {
+  @include text-medium();
+  color: var(--font-secondary);
+  margin-right: 4px;
+}
+
+
+
+.center {
+  justify-content: center;
+}

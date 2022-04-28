@@ -1,0 +1,369 @@
+@import '@/styles/variables.module.scss';
+
+@mixin hover($background, $color) {
+  &:hover {
+    background-color: $background;
+    color: $color;
+  }
+}
+@mixin active($background, $color) {
+  &:active {
+    background-color: $background;
+    color: $color;
+  }
+}
+@mixin disabled($background, $color) {
+  &:disabled,
+  &.disabled {
+    background-color: $background;
+    color: $color;
+  }
+}
+
+// base
+.button {
+  display: inline-flex;
+  position: relative;
+  background-color: none;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  transition: $transition-normal;
+  transition-property: background-color, color, top;
+  padding: 0;
+  margin: 0;
+  background-clip: padding-box;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration: none;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:disabled,
+  &.disabled,
+  &.notActive {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.text {
+  transition: $transition-normal;
+  transition-property: color;
+}
+// base end
+
+// shape
+.shape_small {
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 4px;
+  &.color_primary:after,
+  &.color_secondary:after {
+    border-radius: 4px;
+  }
+  &.color_secondary:after {
+    border-radius: 3px;
+  }
+  &.color_secondary:active:after {
+    border-radius: 4px;
+  }
+}
+
+.shape_big {
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 4px;
+  &.color_primary:after,
+  &.color_secondary:after {
+    border-radius: 6px;
+  }
+  &.color_secondary:after {
+    border-radius: 3px;
+  }
+  &.color_secondary:active:after {
+    border-radius: 6px;
+  }
+}
+
+.shape_tab-big {
+  height: 52px;
+  padding: 0 32px;
+  border-radius: 4px;
+}
+
+.shape_tab-small {
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.shape_tab-xs {
+  height: 28px;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.shape_nav-underline {
+  position: relative;
+  flex-direction: column;
+  top: 0;
+  &:after {
+    content: '';
+    display: block;
+    height: 0px;
+    width: 100%;
+    border-radius: 2px;
+  }
+  &.additionalState {
+    &:after {
+      height: 2px;
+    }
+    top: 2px;
+  }
+}
+
+.shape_text {
+  flex-direction: column;
+  &.dynamicUnderline {
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 0;
+      transition: $transition-fast;
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+  &.underline {
+    text-decoration: underline;
+  }
+}
+// shape end
+
+// color
+.color_primary {
+  color: var(--white);
+  transition: $transition-normal;
+  background: linear-gradient(var(--gradient-button));
+  &:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--gradient-hover));
+    transition: $transition-normal;
+    transition-property: opacity;
+    z-index: 2;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
+  &:active:after {
+    opacity: 0;
+  }
+  &.loading:after {
+    opacity: 1;
+  }
+
+  .label {
+    z-index: 3;
+  }
+
+  &.loading {
+    .label {
+      color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .loadingIcon {
+    path {
+      stroke: var(--white);
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    background: rgba(0, 0, 0, 0);
+    &:after {
+      opacity: 0;
+    }
+  }
+  @include disabled(var(--background), var(--disabled-state));
+}
+
+.color_secondary {
+  color: var(--main);
+  transition: $transition-normal;
+  background: var(--main);
+  &:after {
+    position: absolute;
+    content: '';
+    background: var(--white);
+    transition: $transition-normal;
+    transition-property: opacity background-color;
+    z-index: 2;
+    opacity: 1;
+    box-sizing: border-box;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    top: 1px;
+    left: 1px;
+  }
+  &:hover:after {
+    opacity: 0;
+  }
+  &:active:after {
+    opacity: 1;
+    background: linear-gradient(var(--gradient-hover));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &.loading:after {
+    opacity: 0;
+  }
+  &:hover {
+    color: var(--white);
+  }
+
+  .label {
+    z-index: 3;
+  }
+
+  &.loading {
+    background: linear-gradient(var(--gradient-hover));
+    .label {
+      color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .loadingIcon {
+    path {
+      stroke: var(--white);
+    }
+  }
+
+  &:disabled,
+  &.disabled {
+    background: var(--disabled-state);
+    &:after {
+      opacity: 1;
+    }
+  }
+  @include disabled(var(--disabled-state), var(--disabled-state));
+}
+
+.color_tab_base {
+  background-color: var(--background);
+  color: var(--font-captions);
+  transition: $transition-fast;
+  &.additionalState {
+    color: var(--white);
+  }
+}
+
+.color_tab-green {
+  @extend .color_tab_base;
+  &.additionalState {
+    background-color: var(--green);
+  }
+}
+
+.color_tab-red {
+  @extend .color_tab_base;
+  &.additionalState {
+    background-color: var(--red);
+  }
+}
+
+.color_tab-blue {
+  @extend .color_tab_base;
+  &.additionalState {
+    background-color: var(--main);
+  }
+}
+
+.color_nav-text-black {
+  color: var(--font-primary);
+  &:after {
+    transition: $transition-normal;
+    transition-property: background-color;
+    background-color: var(--main);
+  }
+  &:hover {
+    color: var(--main);
+  }
+  &:disabled,
+  &.disabled {
+    color: var(--disabled-state);
+  }
+}
+
+.color_text-white {
+  color: var(--white);
+  &:after {
+    background: var(--white);
+  }
+}
+.color_text-blue {
+  color: var(--main);
+  &:after {
+    background: var(--main);
+  }
+}
+
+.color_text-red {
+  color: var(--red);
+  &:after {
+    background: var(--red);
+  }
+}
+
+// color end
+
+// font
+.font_font_small {
+  @include button-small();
+}
+.font_font_big {
+  @include button-big();
+}
+.font_text-big {
+  @include text-big();
+}
+.font_text-medium {
+  @include text-medium();
+}
+// font end
+
+// loading
+.loading {
+  cursor: default;
+  pointer-events: none;
+  .loadingIcon {
+    position: absolute;
+    z-index: 10;
+    transform-origin: 50% 50%;
+  }
+}
+// loading end

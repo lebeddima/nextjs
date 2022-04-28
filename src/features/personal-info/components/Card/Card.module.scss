@@ -1,0 +1,21 @@
+@import '@/styles/variables.module.scss';
+
+.card {
+  box-shadow: $shadow-cards;
+  border-radius: 8px;
+  background: var(--white);
+  padding: 16px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.title {
+  @include h5();
+  color: var(--main);
+  text-transform: uppercase;
+}

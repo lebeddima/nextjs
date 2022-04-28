@@ -1,0 +1,15 @@
+@import '@/styles/variables.module.scss';
+
+.notificationBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+  & > :only-child{
+    grid-column: 1/-1;
+  }
+
+  @media #{$sm} {
+    grid-template-columns: 1fr;
+  }
+}

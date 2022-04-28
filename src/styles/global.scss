@@ -1,0 +1,68 @@
+@import './normalize.css';
+@import './colors.css';
+@import './variables.module.scss';
+@import './fonts.scss';
+
+html,
+body {
+  @include text-big();
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--font-secondary);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#portal > *:not(:first-child) {
+  display: none;
+}
+
+#__next {
+  height: 100%;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--font-captions);
+  border-radius: 3px;
+}
+*::-webkit-scrollbar {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  width: 6px;
+  height: 6px;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.cabinet-title {
+  @include h4();
+  color: var(--font-primary);
+  margin: 0 0 $elem-padding-24 0;
+}

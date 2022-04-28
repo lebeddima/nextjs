@@ -1,0 +1,8 @@
+@import '@/styles/variables.module.scss';
+
+.error {
+  color: var(--error);
+  @include captions-1();
+  margin: $elem-padding-12 0 0 0;
+  text-align: center;
+}

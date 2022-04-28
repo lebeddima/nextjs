@@ -1,0 +1,7 @@
+{
+  "notification": {
+    "verification-required": "Verification required",
+    "verification-message": "Your account is almost ready. To be able to use all the capabilities of our system, you need to be verified.",
+    "verification-link": "Go to verification."
+  }
+}

@@ -1,0 +1,106 @@
+@import '@/styles/variables.module.scss';
+
+.rippleBase {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('~assets/images/ripple_points.png');
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  margin-top: 142px;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.textBlock {
+  margin-right: 24px;
+}
+
+.header {
+  @include h2();
+  color: var(--font-primary);
+  & > * {
+    display: block;
+  }
+  & > *:nth-child(2) {
+    color: var(--main);
+  }
+}
+
+.description {
+  margin-top: 16px;
+  @include text-big();
+  color: var(--font-secondary);
+}
+
+.cardBlock {
+  &_left {
+    margin-left: auto;
+    margin-top: 102px;
+  }
+  &_right {
+    margin-left: 20px;
+  }
+}
+
+.cardCont {
+}
+
+.card {
+  width: 240px;
+  border-radius: 6px;
+  padding: 24px 16px;
+  color: var(--white);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+
+  .cardHeader {
+    @include button-big();
+    margin-top: 8px;
+  }
+  .cardDesc {
+    @include text-medium();
+    margin-top: 8px;
+  }
+}
+
+.cardCont {
+  &_1 {
+    position: relative;
+    .card {
+      background: linear-gradient(135deg, #238aff 0%, #06d9ff 100%);
+    }
+    .ripple {
+      @extend .rippleBase;
+      bottom: -194px;
+      right: -72px;
+    }
+  }
+  &_2 {
+    position: relative;
+    .card {
+      background: linear-gradient(135deg, #5276fc 0%, #5c9cf8 100%);
+    }
+    .ripple {
+      @extend .rippleBase;
+      top: -25px;
+      left: -114px;
+    }
+  }
+  &_3 {
+    margin-top: 32px;
+    .card {
+      background: linear-gradient(135deg, #6ce4f1 0%, #65c4f4 100%);
+      width: 215px;
+    }
+  }
+}

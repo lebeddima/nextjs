@@ -1,0 +1,49 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  background: var(--white);
+  margin-top: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.item {
+  width: 100%;
+  margin-right: 27px;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .commercialCard {
+    height: 176px;
+    box-shadow: $shadow-cards;
+    border-radius: 8px;
+  }
+  .currencyCard {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    padding: 0 24px;
+    background: var(--background);
+    height: 72px;
+    border-radius: 6px;
+
+    &_info {
+      margin-left: 32px;
+    }
+
+    &_top {
+      @include button-big();
+      color: var(--font-primary);
+    }
+
+    &_bottom {
+      display: flex;
+      & > *:last-child {
+        margin-left: 8px;
+      }
+    }
+  }
+}

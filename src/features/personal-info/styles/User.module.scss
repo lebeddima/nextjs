@@ -1,0 +1,59 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  display: flex;
+  gap: 24px;
+}
+
+.title {
+  @include h5();
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--font-primary);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  @include text-medium();
+  color: var(--font-captions);
+}
+
+.id {
+  @include text-medium();
+  color: var(--font-primary);
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  background-color: var(--red);
+}
+
+.status {
+  @include text-big();
+
+  display: flex;
+  align-items: center;
+  color: var(--red);
+
+  &.active {
+    color: var(--green);
+
+    .dot {
+      background-color: var(--green);
+    }
+  }
+}

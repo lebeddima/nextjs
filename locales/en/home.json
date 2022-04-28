@@ -1,0 +1,37 @@
+{
+  "start": {
+    "get-started": "Get started",
+    "title": "START YOUR CRYPTO JOURNEY TODAY",
+    "title-desc": "The easiest way to manage multiple cryptocurrency assets"
+  },
+  "secure": {
+    "title": {
+      "line_1": "We are one of the most",
+      "line_2": "secure exchanges",
+      "line_3": "in the world."
+    },
+    "title-desc": "The easiest way to manage multiple cryptocurrency assets",
+    "industry-card": {
+      "title": "Industry best Practices",
+      "desc": "Cryptocurrency stored on our servers is covered by our insurance policy"
+    },
+    "insurance-card": {
+      "title": "Protected by Insurance",
+      "desc": "Cryptocurrency shared on our servers is covered by our insurance policy"
+    },
+    "secure-card": {
+      "title": "Secure Storage",
+      "desc": "We sore the vast majority of the digital assets in secure offline storage"
+    }
+  },
+  "steps": {
+    "title": {
+      "part_1": "Get Started",
+      "part_2": "in three easy Steps"
+    },
+    "title-desc": "The easiest way to manage multiple cryptocurrency assets",
+    "step_1": "Create an account",
+    "step_2": "Top up your currency balance",
+    "step_3": "Start buy & sell"
+  }
+}

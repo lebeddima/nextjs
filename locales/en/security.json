@@ -1,0 +1,41 @@
+{
+  "header": "Security",
+  "change-pass": {
+    "title-pass": "New password",
+    "desc-pass": "Please note that once you change your password, you will be de-authorised from all other devices.",
+    "title-success": "Password changed",
+    "desc-success": "You've successfully changed your password."
+  },
+  "2fa": {
+    "turnOff": "Turn Off",
+    "turnOn": "Turn On",
+    "title": "Setting Google Authenticator",
+    "disable-title": "Disable Google Authenticator",
+    "activate-desc": "Download Google Authenticator App and scan the QR code using the application",
+    "activate-info": "If you cannot scan the code, enter it manually.",
+    "success": {
+      "title": "Authentication added",
+      "description": "You've successfully added Google Authenticator"
+    },
+    "disable-success": {
+      "title": "Authentication disabled",
+      "description": "You've successfully disable Google Authenticator"
+    },
+    "access-codes-title": "Access codes",
+    "access-codes-info": "Use one of these codes to log in if your device is lost. Keep in mind that each code can only be used once."
+  },
+  "change-email": {
+    "title-email": "Change email",
+    "desc-email": "Enter a new email.",
+    "title-success": "Email changed",
+    "desc-success": "You've successfully changed your email.",
+    "desc-error": "Please try again later or contact Support",
+    "desc-confirm": "A confirmation code was sent to the {{variant}} email you provided."
+  },
+  "change-phone": {
+    "title-phone": "Phone number",
+    "desc-new-phone": "Enter a new phone number.",
+    "title-success": "Phone changed",
+    "desc-success": "You've successfully changed your phone."
+  }
+}

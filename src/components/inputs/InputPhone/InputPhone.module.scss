@@ -1,0 +1,148 @@
+@import '@/styles/variables.module.scss';
+
+.button-base {
+}
+
+.arrow {
+  margin-left: 15px;
+  margin-top: -3px;
+  border-left: 5px solid transparent !important;
+  border-right: 5px solid transparent !important;
+}
+
+.input {
+  width: 100% !important;
+  border: solid 1px var(--back-icon) !important;
+  border-radius: 6px;
+  padding: 0 75px !important;
+  outline: none;
+  color: var(--font-primary);
+  background-color: var(--white) !important;
+  box-sizing: border-box;
+  transition: $transition-normal;
+  height: 56px !important;
+  @include text-big();
+  font-size: 16px !important;
+  &:focus {
+    border: solid 1px var(--disabled-state) !important;
+  }
+  &:disabled {
+    cursor: default;
+    background-color: var(--back-icon) !important;
+  }
+  &.readOnly {
+    pointer-events: none;
+  }
+  &.error {
+    color: var(--error);
+  }
+  &::placeholder {
+    color: var(--font-secondary);
+  }
+}
+
+.button {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border: none !important;
+  position: static !important;
+  :global(.selected-flag) {
+    position: absolute !important;
+    top: 0;
+    width: 75px;
+    height: 100%;
+    padding-left: 16px;
+    transition: $transition-normal;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 1px solid $opacity !important;
+    border-radius: 6px !important;
+    background-clip: padding-box !important;
+    &:hover {
+      background-color: var(--background) !important;
+    }
+  }
+
+  :global(.selected-flag.open) {
+    background-color: var(--background) !important;
+    border: 1px solid $opacity !important;
+    border-radius: 6px !important;
+    background-clip: padding-box !important;
+  }
+  :global(.arrow) {
+    @extend .arrow;
+    border-top: 5px solid var(--font-primary) !important;
+  }
+  :global(.arrow.up) {
+    @extend .arrow;
+    border-top: 0px solid var(--font-primary) !important;
+    border-bottom: 5px solid var(--font-primary) !important;
+  }
+  &.readOnly,
+  &.disabled {
+    :global(.selected-flag) {
+      pointer-events: none;
+    }
+  }
+}
+
+.dropdown {
+  background-color: var(--white) !important;
+  border-radius: 4px !important;
+  box-shadow: $shadow-pop-up !important;
+  width: calc(100% + 2px) !important;
+  z-index: 4 !important;
+
+  :global(.country) {
+    white-space: nowrap;
+    transition: $transition-normal;
+    margin: 2px 8px;
+    font-size: 16px !important;
+    @include text-big();
+    border-radius: 4px !important;
+    color: var(--font-secondary) !important;
+    &:hover {
+      background-color: var(--back-icon) !important;
+    }
+  }
+  :global(.country.highlight) {
+    background-color: var(--back-icon) !important;
+  }
+
+  &.menuShort {
+    max-height: 180px;
+    margin-top: 0;
+    top: 0;
+  }
+}
+
+.countryList {
+  overflow-x: hidden !important;
+}
+
+.search {
+  background-color: var(--white) !important;
+  display: flex;
+  padding: 8px !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  @include text-big();
+
+  input {
+    width: 100%;
+    background-color: var(--background) !important;
+    border: none !important;
+    border-radius: 6px !important;
+    color: var(--font-primary);
+    height: 40px;
+    margin: 0 !important;
+    padding-left: 12px !important;
+    font-size: 14px !important;
+    box-sizing: border-box;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      -webkit-appearance: none;
+    }
+  }
+}

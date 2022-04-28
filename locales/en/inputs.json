@@ -1,0 +1,17 @@
+{
+  "type-here": "Type here...",
+  "choose-one": "Choose one",
+  "least-character": "at least 8 character",
+  "old-password": "Old password",
+  "new-password": "New password",
+  "first-name": "First name",
+  "last-name": "Last name",
+  "date-birth": "Date of birth",
+  "country": "Country",
+  "phone-number": "Phone number",
+  "email": "Email",
+  "password": "Password",
+  "repeat-password": "Repeat password",
+  "attach-files": "Attach files",
+  "new-email": "New email"
+}

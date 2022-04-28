@@ -1,0 +1,31 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.linkCont {
+  display: flex;
+  align-items: center;
+  &:not(:last-child):after {
+    content: '/';
+    margin: 0 14px;
+  }
+  &:last-child {
+    & > * {
+      color: var(--font-secondary);
+      cursor: default;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.link {
+  @include text-small();
+  text-decoration: none;
+  color: var(--main);
+}
+

@@ -1,0 +1,8 @@
+{
+    "header": "Notifications",
+    "twoFaNotification": {
+        "verification-required": "Enabled 2fa required",
+        "verification-message": "Your account is almost ready. To be able to use all the capabilities of our system, you need to enable 2fa.",
+        "verification-link": "Go to security page."
+      }
+}   

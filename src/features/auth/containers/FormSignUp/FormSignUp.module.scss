@@ -1,0 +1,36 @@
+@import '@/styles/variables.module.scss';
+@import '../../styles/variables.module.scss';
+
+.container {
+  h1 {
+    @include auth-title();
+  }
+
+  & > :last-child {
+    margin-top: $elem-padding-16;
+  }
+}
+
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & > * {
+    width: calc(50% - #{$elem-padding-24});
+    margin-top: $elem-padding-32;
+  }
+}
+
+.checkbox {
+  margin-top: $elem-padding-24;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+form {
+  @include readOnly;
+}

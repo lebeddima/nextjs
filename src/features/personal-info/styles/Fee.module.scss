@@ -1,0 +1,49 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 8px;
+  height: 80px;
+  margin-top: 16px;
+}
+
+.infoContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+}
+
+.item {
+  background-color: var(--background);
+  height: 80px;
+  padding: 16px 8px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+
+  &.horizontal {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    width: 100%;
+    height: 36px;
+    gap: 8px;
+    @include text-small();
+
+    color: var(--font-primary);
+  }
+}
+
+.title {
+  @include text-small();
+  color: var(--main);
+}
+
+.text {
+  @include text-medium();
+  margin-top: 10px;
+  color: var(--font-primary);
+}

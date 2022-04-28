@@ -1,0 +1,30 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 2px;
+
+    .icon {
+        display: flex;
+        align-items: center;
+    }
+
+    color: var(--red);
+    background-color: var(--error-secondary);
+    @include text-big();
+
+    &.bigger {
+      color: var(--green);
+      background-color: var(--success-secondary);
+      .icon {
+        svg{
+            transform: rotate(180deg);
+        }
+    }
+    }
+}

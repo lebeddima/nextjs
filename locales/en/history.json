@@ -1,0 +1,16 @@
+{
+  "header": "History",
+  "table-headers": {
+    "time": "Time",
+    "pair": "Pair",
+    "account": "Account",
+    "type": "Type",
+    "side": "Side",
+    "price": "Price",
+    "fee": "fee",
+    "volume": "Volume",
+    "filled": "Filled",
+    "total": "Total",
+    "status": "Status"
+  }
+}

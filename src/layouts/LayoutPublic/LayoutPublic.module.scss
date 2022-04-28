@@ -1,0 +1,87 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  height: calc(100% - #{$header-height});
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: var(--background);
+}
+
+.bgColor_white {
+  background: var(--white);
+}
+
+.headerCont {
+  background: var(--white);
+  overflow: hidden;
+  box-shadow: $shadow-cards;
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
+  padding-left: $content-padding-desk;
+  padding-right: $content-padding-desk;
+  max-width: calc(#{$layout-width} + #{$content-padding-desk} * 2);
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 1;
+  @media #{$md} {
+    padding-left: $content-padding-mob;
+    padding-right: $content-padding-mob;
+  }
+}
+
+// themes
+.contentColor_white {
+  background-color: var(--white);
+}
+
+.fullScreen {
+  .content {
+    background-color: var(--background);
+    max-width: none;
+    padding: $content-padding-mob;
+  }
+}
+
+.width100 {
+  & .content {
+    max-width: none;
+  }
+}
+
+.auth {
+  .content {
+    justify-content: center;
+    align-items: center;
+    padding: $modal-padding-desk;
+    @media #{$md} {
+      padding: $content-padding-mob;
+    }
+  }
+}
+
+.market {
+  .content {
+    padding: $elem-padding-24;
+    @media #{$md} {
+      padding: $content-padding-mob;
+    }
+  }
+}
+
+.verticalPadding {
+  & .content {
+    padding-top: 40px;
+    padding-bottom: 192px;
+  }
+}

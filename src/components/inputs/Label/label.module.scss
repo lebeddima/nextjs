@@ -1,0 +1,26 @@
+@import '@/styles/variables.module.scss';
+
+.topCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include captions-1();
+  margin-bottom: 4px;
+}
+
+.label {
+  color: var(--font-secondary);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.additionallabel {
+  color: var(--font-secondary);
+}
+
+.error {
+  color: var(--error);
+  @include captions-1();
+  margin: 4px 0 0 0;
+}

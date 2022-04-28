@@ -1,0 +1,61 @@
+@import '@/styles/variables.module.scss';
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    @include text-big();
+    margin-left: 10px;
+    vertical-align: text-bottom;
+  }
+}
+
+.dropzone {
+  flex: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $content-padding-mob;
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--main) 0%,
+      var(--main) 50%,
+      transparent 50%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      to right,
+      var(--main) 0%,
+      var(--main) 50%,
+      transparent 50%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--main) 0%,
+      var(--main) 50%,
+      transparent 50%,
+      transparent 100%
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--main) 0%,
+      var(--main) 50%,
+      transparent 50%,
+      transparent 100%
+    );
+  background-position: left top, left bottom, left top, right top;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 16px 1px, 16px 1px, 1px 16px, 1px 16px;
+  border-radius: 4px;
+  background-color: var(--white);
+  color: var(--main);
+  outline: none;
+  transition: border 0.24s ease-in-out;
+
+  &.disabled {
+    pointer-events: none;
+  }
+}

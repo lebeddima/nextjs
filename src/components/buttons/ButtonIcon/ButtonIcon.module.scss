@@ -1,0 +1,89 @@
+@import '@/styles/variables.module.scss';
+
+@mixin disabled($background, $color) {
+  &:disabled {
+    background-color: $background;
+    svg path {
+      stroke: $color;
+    }
+  }
+}
+
+@mixin iconSize($dimension) {
+  svg {
+    height: $dimension;
+    width: $dimension;
+  }
+}
+
+// base
+.button {
+  display: inline-flex;
+  position: relative;
+  background-color: none;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  transition: $transition-normal;
+  transition-property: background-color;
+  padding: 0;
+  margin: 0;
+  background-clip: padding-box;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0);
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:disabled,
+  &.notActive {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+// base end
+
+// color
+.color_opacity {
+  transition: $transition-normal;
+
+  &:hover {
+    background-color: var(--background);
+  }
+  &:active {
+    background-color: var(--back-icon);
+  }
+  &.additionalState {
+    background-color: var(--back-icon);
+  }
+}
+// color end
+
+// shape
+.shape {
+  &_square-small {
+    padding: 4px;
+    border-radius: 4px;
+  }
+  &_square-medium {
+    padding: 4px;
+    border-radius: 4px;
+  }
+  &_square-big {
+    padding: 4px;
+    border-radius: 4px;
+  }
+}
+
+// loading
+.loading {
+  cursor: default;
+  pointer-events: none;
+}
+// loading end

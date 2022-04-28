@@ -1,0 +1,23 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  display: flex;
+  &.center {
+    text-align: center;
+  }
+  .codeCont {
+    padding: 8px 0;
+    & > span {
+      color: var(--main);
+      @include links();
+    }
+  }
+  .error {
+    bottom: -12px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    color: var(--error);
+    @include captions-1();
+  }
+}

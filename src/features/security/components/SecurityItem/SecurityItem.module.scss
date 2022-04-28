@@ -1,0 +1,59 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  background: var(--white);
+  box-shadow: $shadow-cards;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.item {
+  &_title {
+    @include button-big();
+    color: var(--font-primary);
+  }
+
+  &_subtitle {
+    @include text-medium();
+    color: var(--font-captions);
+  }
+
+  &_info {
+    & > * {
+      margin: 0;
+    }
+    margin-left: $elem-padding-24;
+  }
+
+  &_left {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.change {
+  @include links();
+  color: var(--main);
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.subTitleColor {
+  &_default {
+    color: var(--font-captions);
+  }
+
+  &_red {
+    color: var(--red);
+  }
+
+  &_green {
+    color: var(--green);
+  }
+}

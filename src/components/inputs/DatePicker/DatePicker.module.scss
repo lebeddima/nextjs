@@ -1,0 +1,99 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  cursor: text;
+  display: flex;
+  flex-direction: column;
+  :global(.DayPickerInput) {
+    display: flex;
+  }
+  &.disable {
+    pointer-events: none;
+  }
+}
+
+.input {
+  padding: 0 16px;
+  border: solid 1px var(--back-icon);
+  width: 100%;
+  outline: none;
+  background: rgba(0, 0, 0, 0);
+  font-size: 16px !important;
+  color: var(--font-primary);
+  @include text-big();
+  &:hover {
+    cursor: pointer;
+  }
+  &::placeholder {
+    color: var(--font-secondary);
+  }
+}
+
+.dayPicker {
+  background: rgba(255, 255, 255, 25);
+  top: 70px;
+  border-radius: 8px;
+  border: solid 1px var(--back-icon);
+  position: absolute;
+  box-shadow: $shadow-cards;
+  left: -410px;
+  &.right {
+    left: -213px;
+  }
+
+  :global(.DayPicker-Day) {
+    border-radius: 4px;
+    &:hover {
+      color: var(--main);
+    }
+  }
+  :global(.DayPicker-Day--selected) {
+    color: var(--font-primary);
+  }
+  :global(.DayPicker-Day--today) {
+    color: var(--font-primary);
+  }
+}
+
+.hyphen {
+  margin-right: 8px;
+  background: rgba(255, 255, 255, 0.75);
+  height: 1px;
+  width: 6px;
+}
+
+// shape
+.shape_big {
+  padding: 15px 16px;
+  border-radius: 6px;
+}
+.shape_small {
+  padding: 11px 16px;
+  border-radius: 4px;
+}
+
+// font
+.font_big {
+  @include text-big;
+}
+.font_small {
+  @include text-small;
+}
+
+.DayPicker-Caption {
+  display: flex;
+  justify-content: space-between;
+}
+
+.monthSelect {
+  border: solid 1px var(--back-icon);
+  color: var(--font-secondary);
+  border-radius: 8px;
+  font-size: 12px;
+  padding: $elem-padding-8;
+}
+
+.yearSelect {
+  @extend .monthSelect;
+  margin-left: 5px;
+}

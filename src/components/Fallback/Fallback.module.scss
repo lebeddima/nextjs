@@ -1,0 +1,15 @@
+@import '@/styles/variables.module.scss';
+
+.fallbackContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.fallbackTitle {
+  text-align: center;
+  @include text-big();
+  color: var(--font-captions);
+  margin-bottom: 16px;
+}

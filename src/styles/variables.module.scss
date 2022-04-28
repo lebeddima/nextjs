@@ -1,0 +1,148 @@
+$opacity: rgba(0, 0, 0, 0);
+
+// transitions
+$transition-fast: 0.15s ease-out;
+$transition-normal: 0.3s ease-out;
+
+// sizes
+$layout-width: 1156px;
+$header-height: 72px;
+$content-padding-desk: 48px;
+$content-padding-mob: 20px;
+$modal-padding-desk: 32px;
+
+$elem-padding-8: 8px;
+$elem-padding-12: 12px;
+$elem-padding-16: 16px;
+$elem-padding-24: 24px;
+$elem-padding-32: 32px;
+$elem-padding-40: 40px;
+$elem-padding-48: 48px;
+$elem-padding-64: 64px;
+
+// shadows
+$shadow-pop-up: -20px 20px 15px rgba(203, 233, 255, 0.2);
+$shadow-cards: 4px 4px 20px rgba(101, 171, 253, 0.1);
+
+// fonts
+$Montserrat-ExtraBold: Montserrat-ExtraBold, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+$Montserat-SemiBold: Montserat-SemiBold, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+$Montserrat-Regular: Montserrat-Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+$Montserrat-Medium: Montserrat-Medium, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+$Montserrat-Bold: Montserrat-Bold, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+@mixin h1() {
+  font-size: 44px;
+  line-height: 62px;
+  font-family: $Montserrat-ExtraBold;
+}
+@mixin h2() {
+  font-size: 40px;
+  line-height: 48px;
+  font-family: $Montserat-SemiBold;
+}
+@mixin h3() {
+  font-size: 36px;
+  line-height: 42px;
+  font-family: $Montserat-SemiBold;
+}
+@mixin h4() {
+  font-size: 26px;
+  line-height: 32px;
+  font-family: $Montserat-SemiBold;
+}
+@mixin h5() {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: $Montserrat-Medium;
+}
+@mixin button-big() {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $Montserat-SemiBold;
+}
+@mixin button-small() {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: $Montserat-SemiBold;
+}
+@mixin text-big() {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $Montserrat-Regular;
+}
+@mixin text-medium() {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: $Montserrat-Medium;
+}
+@mixin text-small() {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: $Montserrat-Medium;
+}
+@mixin links() {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $Montserrat-Medium;
+}
+@mixin captions-1() {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-family: $Montserrat-Medium;
+}
+@mixin captions-2() {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  font-family: $Montserrat-Medium;
+}
+@mixin captions-3() {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  font-family: $Montserrat-Bold;
+}
+@mixin readOnly() {
+  &.readOnly {
+    pointer-events: none;
+  }
+}
+
+// breakpoints
+$width-xxs: 480;
+$width-xs: 576;
+$width-sm: 768;
+$width-md: 992;
+$width-lg: 1200;
+$width-lg-xlg: 1440;
+$width-xlg: 1600;
+
+$xxs: '(max-width: #{$width-xxs}px)';
+$xs: '(max-width: #{$width-xs}px)';
+$sm: '(max-width: #{$width-sm}px)';
+$md: '(max-width: #{$width-md}px)';
+$lg: '(max-width: #{$width-lg}px)';
+$lg-xlg: '(max-width: #{$width-lg-xlg}px)';
+$xlg: '(max-width: #{$width-xlg}px)';
+
+// export for JS
+:export {
+  xxs: $width-xxs;
+  xs: $width-xs;
+  sm: $width-sm;
+  md: $width-md;
+  lg: $width-lg;
+  lgXlg: $width-lg-xlg;
+  xlg: $width-xlg;
+}

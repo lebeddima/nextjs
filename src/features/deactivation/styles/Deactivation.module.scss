@@ -1,0 +1,24 @@
+@import '@/styles/variables.module.scss';
+
+.description {
+  @include text-big();
+  color: var(--font-secondary);
+  margin-bottom: 24px;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+
+.accountTitle {
+  @include text-big();
+  color: var(--font-primary);
+}
+
+.accountStatus {
+  @include text-medium();
+  color: var(--font-secondary);
+}

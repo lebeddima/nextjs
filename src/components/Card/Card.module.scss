@@ -1,0 +1,43 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  background: var(--white);
+  box-shadow: $shadow-pop-up;
+  padding: $modal-padding-desk;
+  width: 100%;
+  &.big {
+    border-radius: 16px;
+  }
+  &.small {
+    border-radius: 10px;
+  }
+  &.micro {
+    border-radius: 4px;
+    padding: $elem-padding-16;
+    box-shadow: $shadow-cards;
+  }
+
+  &.btnAbsolute {
+    padding-right: 64px;
+    .button {
+      position: absolute;
+      top: $modal-padding-desk;
+      right: $modal-padding-desk;
+    }
+    &.micro {
+      .button {
+        top: $elem-padding-16;
+        right: $elem-padding-16;
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}

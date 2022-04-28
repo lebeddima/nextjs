@@ -1,0 +1,57 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: var(--white);
+  box-shadow: $shadow-pop-up;
+  padding: $elem-padding-16;
+  width: 100%;
+  border-radius: 10px;
+
+  &.unread {
+    background: var(--back-icon);
+  }
+}
+
+.titleBlock {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+}
+
+.leftBlock {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .notificationTitle {
+    @include text-medium();
+    color: var(--font-primary);
+    font-weight: bold;
+  }
+
+  & > *:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+
+.notificationDate {
+  display: flex;
+  justify-content: flex-end;
+  @include captions-1();
+  color: var(--font-caption);
+}
+
+.indicator {
+  width: 6px;
+  height: 6px;
+  background-color: var(--main);
+  border-radius: 50%;
+}
+
+.notificationMessage {
+  @include text-medium();
+  margin-top: $elem-padding-16;
+}

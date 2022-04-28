@@ -1,0 +1,23 @@
+{
+  "header": "Deactivate your account",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis facilisis at lectus pulvinar duis sit risus, id quis. Tortor, elementum cursus sit aenean tincidunt est, id sodales pretium. Faucibus ipsum duis bibendum a sed. Dolor libero amet id tempor. Diam pretium tempor eu amet eleifend. Massa in tincidunt lorem vitae nibh gravida consectetur senectus.",
+  "deactivate": "Deactivate",
+  "card": {
+    "title": "Account"
+  },
+  "status": {
+    "active": "Active"
+  },
+  "password": {
+    "title": "Deactivate your account",
+    "description": "All your data will be erased within 15 days. Please note this action cannot be undone!"
+  },
+  "sms": {
+    "title": "Enter code from SMS",
+    "description": "A confirmation code text message was sent to the phone number you provided."
+  },
+  "success": {
+    "title": "Profile deactivated",
+    "description": "You have successfully deactivated the profile."
+  }
+}

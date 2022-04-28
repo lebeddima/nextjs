@@ -1,0 +1,40 @@
+@import '@/styles/variables.module.scss';
+
+.container {
+  display: flex;
+  height: 24px;
+  width: 24px;
+  transition: background-color $transition-normal;
+  border-radius: 4px;
+  cursor: pointer;
+
+  svg {
+    transform: rotate(-90deg);
+    transition: transform $transition-normal;
+    path {
+      fill: var(--main);
+    }
+  }
+  &.open {
+    svg {
+      transform: rotate(90deg);
+      path {
+        fill: var(--main);
+      }
+    }
+  }
+}
+
+@mixin hover-supported {
+  @media not all and (pointer: coarse) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+.container {
+  @include hover-supported() {
+    background: var(--back-icon);
+  }
+}

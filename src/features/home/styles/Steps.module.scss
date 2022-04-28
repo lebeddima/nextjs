@@ -1,0 +1,103 @@
+@import '@/styles/variables.module.scss';
+
+.rippleBase {
+  position: absolute;
+  width: 263px;
+  height: 263px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('~assets/images/ripple_points.png');
+  z-index: 1;
+}
+
+.container {
+  margin-top: 150px;
+  margin-bottom: 264px;
+  & * {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.header {
+  text-align: center;
+  margin: 0 auto;
+
+  h3 {
+    @include h2();
+    color: var(--font-primary);
+    margin: 0 auto;
+  }
+  p {
+    @include text-big();
+    margin-top: 16px;
+    color: var(--font-secondary);
+  }
+}
+
+.circle {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 130px;
+  max-width: 831px;
+  & > * {
+    position: relative;
+  }
+}
+
+.stepText {
+  position: absolute;
+  width: 140px;
+  z-index: 2;
+  text-align: center;
+  left: 50%;
+  margin-top: 28px;
+  transform: translate(-50%);
+}
+
+.stepsItem {
+  &_1 {
+    .circleInner {
+      background: linear-gradient(180deg, #6ce4f1 0%, #6ad8f2 100%);
+    }
+    .ripple {
+      @extend .rippleBase;
+      bottom: -88px;
+      right: -101px;
+    }
+  }
+  &_2 {
+    .circleInner {
+      background: linear-gradient(180deg, #4cadb9 0%, #287bff 0.01%, #10bdff 100%);
+    }
+    .ripple {
+      @extend .rippleBase;
+      bottom: -87px;
+      right: -94px;
+    }
+  }
+  &_3 {
+    .circleInner {
+      background: linear-gradient(180deg, #5da2f8 0%, #5a92f9 100%);
+    }
+    .ripple {
+      @extend .rippleBase;
+      bottom: -86px;
+      right: -89px;
+    }
+  }
+}
+
+.stepsLine {
+  height: 3px;
+  background: var(--main);
+  width: 100%;
+  z-index: 2;
+}
